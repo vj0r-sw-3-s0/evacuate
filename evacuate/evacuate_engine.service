@@ -1,0 +1,13 @@
+[Unit]
+Description=Evacuate engine service. Owner Alexander Semenov
+After=network.target
+ 
+[Service]
+User=root
+Group=root
+Type=simple
+Restart=always
+ExecStart=/usr/local/bin/evacuate_engine
+ 
+[Install]
+WantedBy=multi-user.target
